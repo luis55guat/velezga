@@ -46,6 +46,18 @@
         color: #333;
       }
     </style>
+    <script
+    const darkModeButton = document.getElementById("dark-mode-button");
+const lightModeButton = document.getElementById("light-mode-button");
+
+darkModeButton.addEventListener("click", () => {
+  document.body.classList.add("dark-mode");
+});
+
+lightModeButton.addEventListener("click", () => {
+  document.body.classList.remove("dark-mode");
+});
+      </script>
   </head>
 <body>
     <img src="images/bg/vl.png" alt="Logo de VL" style="display: block; margin: 0 auto; width: 360px;">
