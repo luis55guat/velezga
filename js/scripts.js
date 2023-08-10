@@ -29,6 +29,16 @@
 
 */
 
+const darkModeButton = document.getElementById("dark-mode-button");
+const lightModeButton = document.getElementById("light-mode-button");
+
+darkModeButton.addEventListener("click", () => {
+  document.body.classList.add("dark-mode");
+});
+
+lightModeButton.addEventListener("click", () => {
+  document.body.classList.remove("dark-mode");
+});
 
 (function ($) {
     'use strict';
