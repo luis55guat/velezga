@@ -40,18 +40,6 @@
         color: #333;
       }
     </style>
-    <script>
-const darkModeButton = document.getElementById("dark-mode-button");
-const lightModeButton = document.getElementById("light-mode-button");
-
-darkModeButton.addEventListener("click", () => {
-  document.body.classList.add("dark-mode");
-});
-
-lightModeButton.addEventListener("click", () => {
-  document.body.classList.remove("dark-mode");
-});     
- </script>
   </head>
 <body>
     <img src="images/bg/vl.png" alt="Logo de VL" style="display: block; margin: 0 auto; width: 360px;">
@@ -60,5 +48,17 @@ lightModeButton.addEventListener("click", () => {
     <p>Disculpa las molestias y gracias por tu paciencia.</p>
     <button id="dark-mode-button">Modo oscuro</button>
     <button id="light-mode-button">Modo claro</button>
+  <script>
+    const darkModeButton = document.getElementById("dark-mode-button");
+    const lightModeButton = document.getElementById("light-mode-button");
+    
+    darkModeButton.addEventListener("click", () => {
+      document.body.classList.add("dark-mode");
+    });
+    
+    lightModeButton.addEventListener("click", () => {
+      document.body.classList.remove("dark-mode");
+    });     
+  </script>
 </body>
 </html>
