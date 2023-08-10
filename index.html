@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,17 +30,18 @@
             color: #777;
             margin-bottom: 20px;
         }
-      .dark-mode {
-      background-color: #333;
-      color: #fff;
+
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
         }
 
-      .light-mode {
-        background-color: #fff;
-        color: #333;
-      }
+        .light-mode {
+            background-color: #fff;
+            color: #333;
+        }
     </style>
-  </head>
+</head>
 <body>
     <img src="images/bg/vl.png" alt="Logo de VL" style="display: block; margin: 0 auto; width: 360px;">
     <h1>Página en Construcción</h1>
@@ -48,17 +49,18 @@
     <p>Disculpa las molestias y gracias por tu paciencia.</p>
     <button id="dark-mode-button">Modo oscuro</button>
     <button id="light-mode-button">Modo claro</button>
-  <script>
-    const darkModeButton = document.getElementById("dark-mode-button");
-    const lightModeButton = document.getElementById("light-mode-button");
-    
-    darkModeButton.addEventListener("click", () => {
-      document.body.classList.add("dark-mode");
-    });
-    
-    lightModeButton.addEventListener("click", () => {
-      document.body.classList.remove("dark-mode");
-    });     
-  </script>
+
+    <script>
+        const darkModeButton = document.getElementById("dark-mode-button");
+        const lightModeButton = document.getElementById("light-mode-button");
+
+        darkModeButton.addEventListener("click", () => {
+            document.body.classList.add("dark-mode");
+        });
+
+        lightModeButton.addEventListener("click", () => {
+            document.body.classList.remove("dark-mode");
+        });
+    </script>
 </body>
 </html>
