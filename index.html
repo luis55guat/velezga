@@ -13,7 +13,6 @@
     <title>Página en Construcción ║ www.vl.gt</title>
     <style>
         body {
-            background-color: #f4f4f4;
             font-family: Arial, sans-serif;
             text-align: center;
             padding-top: 100px;
@@ -21,13 +20,11 @@
 
         h1 {
             font-size: 24px;
-            color: #333;
             margin-bottom: 30px;
         }
 
         p {
             font-size: 18px;
-            color: #777;
             margin-bottom: 20px;
         }
 
@@ -40,26 +37,41 @@
             background-color: #fff;
             color: #333;
         }
+
+        /* Cambia los colores de los botones para ambos modos */
+        #dark-mode-button, #light-mode-button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <img src="images/bg/vl.png" alt="Logo de VL" style="display: block; margin: 0 auto; width: 360px;">
-    <h1>Página en Construcción</h1>
-    <p>Estamos trabajando en esta página y estará disponible pronto.</p>
-    <p>Disculpa las molestias y gracias por tu paciencia.</p>
+    <h1 class="dark-mode light-mode">Página en Construcción</h1>
+    <p class="dark-mode light-mode">Estamos trabajando en esta página y estará disponible pronto.</p>
+    <p class="dark-mode light-mode">Disculpa las molestias y gracias por tu paciencia.</p>
     <button id="dark-mode-button">Modo oscuro</button>
     <button id="light-mode-button">Modo claro</button>
 
     <script>
         const darkModeButton = document.getElementById("dark-mode-button");
         const lightModeButton = document.getElementById("light-mode-button");
+        const pageTitle = document.querySelector("h1");
+        const pageTexts = document.querySelectorAll("p");
 
         darkModeButton.addEventListener("click", () => {
             document.body.classList.add("dark-mode");
+            pageTitle.classList.add("dark-mode");
+            pageTexts.forEach(text => text.classList.add("dark-mode"));
         });
 
         lightModeButton.addEventListener("click", () => {
             document.body.classList.remove("dark-mode");
+            pageTitle.classList.remove("dark-mode");
+            pageTexts.forEach(text => text.classList.remove("dark-mode"));
         });
     </script>
 </body>
